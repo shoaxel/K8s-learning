@@ -18,3 +18,5 @@ spec:
         ports:
         - containerPort: 8080
 #kubectl apply -f deploy.yaml
+#kubectl delete all --all
+
