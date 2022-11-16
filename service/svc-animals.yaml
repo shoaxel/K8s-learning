@@ -12,3 +12,7 @@ spec:
   selector:
     canary: hear-bear
   type: LoadBalancer
+  
+  #kubectl apply -f svc-animals.yaml
+  #kubectl delete all --all
+
