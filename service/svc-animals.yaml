@@ -15,4 +15,5 @@ spec:
   
   #kubectl apply -f svc-animals.yaml
   #kubectl delete all --all
+  #kubectl get svc
 
