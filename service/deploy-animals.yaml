@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bear-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bear
+  template:
+    metadata:
+      labels:
+        app: bear
+        canary: hear-bear
+    spec:
+      containers:
+      - name: bear
+        image: supergiantkir/animals:bear
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hear-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hear
+  template:
+    metadata:
+      labels:
+        app: hear
+        canary: hear-bear
+    spec:
+      containers:
+      - name: hear
+        image: supergiantkir/animals:hear
+        ports:
+        - containerPort: 80
