@@ -40,3 +40,7 @@ spec:
         image: supergiantkir/animals:hear
         ports:
         - containerPort: 80
+        
+  #kubectl apply -f svc-animals.yaml
+  #kubectl delete all --all
+
